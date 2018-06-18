@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+
+    <title>频道</title>
+    <style>
+        .navbar-brand{
+            width: 50px;
+            background: url(../static/img/slider/4.jpg) no-repeat center;
+            background-size: 75%;
+        }
+        .side-bar .list-group-item{
+            border: 0;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .news-list-item {
+            padding:15px 0 15px 0;
+            border-bottom: 1px solid #efeff0;
+        }
+        .news-list-item img{
+            display: block;
+            max-width: 100%;
+            border-radius: 3px;
+        }
+        .news-list-item .title{
+            font:18px/30px a;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .news-list-item .info{
+            color: #888;
+        }
+        .f-cb:after{
+            clear:both;
+            content:'';
+            display: block;
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+        .footer{
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: #969696;
+            text-align: center;
+        }
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+        <% include include/common-header.html%>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="list-group side-bar">
+                    <a  href='javascript:' class="list-group-item {{ motion_1_class }}" v-on:click="change(1)">动漫</a>
+                    <a  href='javascript:' class="list-group-item {{ motion_2_class }}" v-on:click="change(2)">电影</a>
+                    <a  href='javascript:' class="list-group-item {{ motion_3_class }}" v-on:click="change(3)">音乐</a>
+                    <a  href='javascript:' class="list-group-item {{ motion_4_class }}" v-on:click="change(4)">游戏</a>
+                </div>
+            </div>
+            <div class="col-sm-7 " v-show="show_1" v-cloak>
+                <div class="news-list">
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/cartoon/1/1.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">Netflix动画《B: The Beginning》第二季制作决定</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/cartoon/2/2.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">剧场版动画《薄墨樱 -GARO-》10月上映！CAST名单公开</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/cartoon/3/3.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">日本媒体分析中国观众对4月番动画的看法</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7 " v-cloak v-show="show_2">
+                <div class="news-list">
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/movie/1/1.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">复仇者联盟3"全球票房破20亿美元
+                                比"阿凡达"晚一天 海外票房中国3.6亿领跑</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/movie/2/2.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">《银魂2》曝高杉晋助角色定妆照
+                                长泽雅美冈田将生透露场景变多 续作更搞笑</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/movie/3/3.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">《阿凡达2》佐伊索尔达娜的戏份杀青
+                                卡神：预览片段的精彩程度把自己都惊到了</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7 " v-cloak v-show="show_3">
+                <div class="news-list">
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/music/1/1.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">漫威《黑豹》音乐专辑封面及曲目曝光
+                                格莱美得主&说唱巨星Kendrick Lamar量身打造</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/music/2/2.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">苹果公布2017最受欢迎电影&电视&音乐榜单
+                                "海洋奇缘"&"权力的游戏"&黄老板分类登顶</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/music/3/3.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">“火星哥”实力横扫第60届格莱美奖
+                                夺6奖成最大赢家 "爱乐之城"失最佳影视歌曲</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-7 " v-cloak v-show="show_4">
+                <div class="news-list">
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/games/1/1.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">《赛博朋克2077》新情报放出 支持中文字幕及配音</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/games/2/2.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">E3：《上古卷轴6》公布 国外主播是什么反应？</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-list-item f-cb">
+                        <div class="col-xs-5">
+                            <img src="/static/img/games/3/3.jpg">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="title">《美国末日2》细节曝光 加入跳跃、敌人更聪明</div>
+                            <div class="info">
+                                <span>wanghuahua</span>·
+                                <span>25k</span>·
+                                <span>256°C</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="search-bar">
+                    <input type="search" class="form-control" placeholder="搜一下">
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            © 2017 我的网站永远不可能备案
+        </div>
+        <script src="/static/script/zepto.js"></script>
+        <script src="/static/script/vue.js"></script>
+        <script src="/static/script/js/channel.js"></script>
+</body>
+</html>
