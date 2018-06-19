@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/font_g1s2wlm4l36/iconfont.css">
+
     <title>肥宅新闻首页</title>
     <style>
         .navbar-brand{
@@ -25,11 +27,13 @@
             display: block;
             max-width: 100%;
             border-radius: 3px;
+            height: 150px;
         }
         .news-list-item .title{
             font:18px/30px a;
             font-weight: bold;
             margin-bottom: 5px;
+            text-align: center;
         }
         .news-list-item .info{
             color: #888;
@@ -43,12 +47,25 @@
             visibility: hidden;
         }
         .footer{
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            position: relative;
+            bottom: 0px;
             color: #969696;
             text-align: center;
+        }
+        .cartControl{
+            margin:10px 0 0 64px;
+            padding: 5px 5px;
+        }
+        .cart-count{
+            float: left;
+            margin: 7px 25px 0 25px;
+        }
+        .iconfont{
+            float: left;
+        }
+        .price{
+            margin: 20px 0 0 64px;
+            padding: 10px;
         }
     </style>
 </head>
@@ -59,69 +76,71 @@
         <div class="row">
             <div class="col-sm-2">
                 <div class="list-group side-bar">
-                    <a href="/" class="list-group-item active">地主家的傻儿子</a>
-                    <a href="/" class="list-group-item">亚洲</a>
-                    <a href="/" class="list-group-item">非酋</a>
-                    <a href="/" class="list-group-item">欧洲人</a>
+                    <a href="javascript:" class="list-group-item active">商品一览</a>
+                    <a href="javascript:" class="list-group-item">购物车</a>
+                    <a href="javascript:" class="list-group-item">氪金</a>
                 </div>
             </div>
-            <div class="col-sm-7">
+            <div class="col-sm-8">
                 <div class="news-list">
                     <div class="news-list-item f-cb">
                         <div class="col-xs-5">
-                            <img src="/static/img/slider/1.jpg">
+                            <img src="/static/img/shopping/肥宅快乐水/1.jpg">
                         </div>
                         <div class="col-xs-7">
-                            <div class="title">我滴个龟龟啊啊啊啊啊撒到我公司的只需发送发送服务个地方啊啊</div>
+                            <div class="title">肥宅快乐水600ml</div>
                             <div class="info">
-                                <span>wanghuahua</span>·
-                                <span>25k</span>·
-                                <span>256°C</span>
+                                <p class="price">单价：3元</p>
+                                <counter></counter>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="news-list">
                     <div class="news-list-item f-cb">
                         <div class="col-xs-5">
-                            <img src="/static/img/slider/1.jpg">
+                            <img src="/static/img/shopping/肥宅快乐盒/3.jpg">
                         </div>
                         <div class="col-xs-7">
-                            <div class="title">我滴个龟龟啊啊啊啊啊撒到我公司的只需发送发送服务个地方啊啊</div>
+                            <div class="title">肥宅快乐盒（任天堂LABO）</div>
                             <div class="info">
-                                <span>wanghuahua</span>·
-                                <span>25k</span>·
-                                <span>256°C</span>
+                                <p class="price">单价：400元</p>
+                                <counter></counter>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="news-list">
                     <div class="news-list-item f-cb">
                         <div class="col-xs-5">
-                            <img src="/static/img/slider/1.jpg">
+                            <img src="/static/img/shopping/肥宅快乐茶/4.jpg">
                         </div>
                         <div class="col-xs-7">
-                            <div class="title">我滴个龟龟啊啊啊啊啊撒到我公司的只需发送发送服务个地方啊啊</div>
+                            <div class="title">肥宅快乐茶</div>
                             <div class="info">
-                                <span>wanghuahua</span>·
-                                <span>25k</span>·
-                                <span>256°C</span>
+                                <p class="price">单价：5元</p>
+                                <counter></counter>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="news-list">
                     <div class="news-list-item f-cb">
                         <div class="col-xs-5">
-                            <img src="/static/img/slider/1.jpg">
+                            <img src="/static/img/shopping/肥宅快乐胶/2.jpg">
                         </div>
                         <div class="col-xs-7">
-                            <div class="title">我滴个龟龟啊啊啊啊啊撒到我公司的只需发送发送服务个地方啊啊</div>
+                            <div class="title">肥宅快乐胶</div>
                             <div class="info">
-                                <span>wanghuahua</span>·
-                                <span>25k</span>·
-                                <span>256°C</span>
+                                <p class="price">单价：800元</p>
+                                <counter></counter>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3">
+
+            <div class="col-sm-2">
                 <div class="search-bar">
                     <input type="search" class="form-control" placeholder="搜一下">
                 </div>

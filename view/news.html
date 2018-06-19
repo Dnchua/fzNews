@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-    <title>肥宅新闻首页</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <title>新闻</title>
     <style>
         .navbar-brand{
             width: 50px;
@@ -43,12 +44,13 @@
             visibility: hidden;
         }
         .footer{
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            position: relative;
+            bottom: 10px;
             color: #969696;
             text-align: center;
+        }
+        img{
+            max-width: 100%;
         }
     </style>
 </head>
@@ -56,80 +58,119 @@
 <div id="app">
         <% include include/common-header.html%>
     <div class="container">
-        <div class="row">
-            <div class="col-sm-2">
-                <div class="list-group side-bar">
-                    <a href="/" class="list-group-item active">地主家的傻儿子</a>
-                    <a href="/" class="list-group-item">亚洲</a>
-                    <a href="/" class="list-group-item">非酋</a>
-                    <a href="/" class="list-group-item">欧洲人</a>
+        <div class="col-md-8">
+            <h1 class="news-title">《刀剑神域》第三季人设公布 幼年桐人萌出一脸血</h1>
+            <div class="news-status">25k阅读 • 35分之前发布
+                <div class="label label-default">动漫</div>
+            </div>
+            <div class="news-content">
+                <blockquote>
+                    <p>
+                        定于今年10月播出的《刀剑神域》第三季动画近日在杂志上首曝主角组人设图。在这个全新的虚拟世界里，幼年桐人的出现令人被萌得心头一颤
+                    </p>
+                </blockquote>
+                <div> 本次杂志公布的三位角色分别是大家熟悉的桐人，以及桐人在新世界遇到的伙伴优吉欧与爱丽丝。故事里，优吉欧和爱丽丝是桐人来到虚拟世界后首先遇到的居民（当时桐人的年龄被设定为11岁），三人很快成为青梅竹马，并不断探索各种冒险之地。人设图上，三位正太和萝莉各具萌点，桐人和优吉欧长大后的容貌同样英俊无比。</div>
+                <img src="/static/img/news/3/3.jpg" alt="">
+                <div>《刀剑神域》第三季的故事围绕着原作里的“Alicization篇”展开。在新篇章里，桐人来到了某个谜一样的虚拟奇幻世界，在那里他遇到了新伙伴优吉欧（CV岛崎信长）与爱丽丝（CV茅野爱衣）。为了实现某个愿望，桐人与优吉欧进入王都的剑士学院研习剑术，在那里他们发现了关于这个世界的更大秘密……</div>
+                <img src="/static/img/news/3/1.png" alt="">
+                <img src="/static/img/news/3/2.png" alt="">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="side-bar-card">
+                <div class="card-title">相关推荐</div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item clearfix">
+                            <div class="col-xs-5 no-padding-h">
+                                <img src="/static/img/others/eng/1_gaitubao_com_1000x700.jpg">
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="title">SNP MPs walk out of PMQs in 'Brexit power grab' protest</div>
+                                <div class="desc">15k阅读 1k评论</div>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <div class="col-xs-5 no-padding-h">
+                                <img src="/static/img/others/eng/2_gaitubao_com_1000x700.jpg">
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="title">World Cup 2018: Spain sack manager Julen Lopetegui two days before first match</div>
+                                <div class="desc">15k阅读 1k评论</div>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <div class="col-xs-5 no-padding-h">
+                                <img src="/static/img/others/eng/3_gaitubao_com_1000x700.jpg">
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="title">Will we ever colonise an asteroid?</div>
+                                <div class="desc">15k阅读 1k评论</div>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <div class="col-xs-5 no-padding-h">
+                                <img src="/static/img/others/jap/1/1.jpg">
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="title">トランプ大統領が帰国 米朝会談の成果強調の一方で疑問の声も</div>
+                                <div class="desc">15k阅读 1k评论</div>
+                            </div>
+                        </div>
+                        <div class="item clearfix">
+                            <div class="col-xs-5 no-padding-h">
+                                <img src="/static/img/others/jap/2/2.jpg">
+                            </div>
+                            <div class="col-xs-7">
+                                <div class="title">３学年一緒？ もう荒れない？ どうなる成人式</div>
+                                <div class="desc">15k阅读 1k评论</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-7">
-                <div class="news-list">
-                    <div class="news-list-item f-cb">
-                        <div class="col-xs-5">
-                            <img src="/static/img/slider/1.jpg">
+            <div class="side-bar-card">
+                <div class="card-title">24小时热闻</div>
+                <div class="card-body">
+                    <div class="list">
+                        <div class="item">
+                            <div class="title">奈良県のゆるキャラ「せんとくん」 無償使用可能に </div>
+                            <div class="desc">15k阅读 1k评论</div>
                         </div>
-                        <div class="col-xs-7">
-                            <div class="title">我滴个龟龟啊啊啊啊啊撒到我公司的只需发送发送服务个地方啊啊</div>
-                            <div class="info">
-                                <span>wanghuahua</span>·
-                                <span>25k</span>·
-                                <span>256°C</span>
-                            </div>
+                        <div class="item">
+                            <div class="title">大阪北部地震、死者５人に　高槻の住宅で６５歳男性死亡 </div>
+                            <div class="desc">15k阅读 1k评论</div>
                         </div>
-                    </div>
-                    <div class="news-list-item f-cb">
-                        <div class="col-xs-5">
-                            <img src="/static/img/slider/1.jpg">
+                        <div class="item">
+                            <div class="title">小４男児が下校中に襲われ重傷　教員が男を取り押さえる </div>
+                            <div class="desc">15k阅读 1k评论</div>
                         </div>
-                        <div class="col-xs-7">
-                            <div class="title">我滴个龟龟啊啊啊啊啊撒到我公司的只需发送发送服务个地方啊啊</div>
-                            <div class="info">
-                                <span>wanghuahua</span>·
-                                <span>25k</span>·
-                                <span>256°C</span>
-                            </div>
+                        <div class="item">
+                            <div class="title">コロンビア戦へ夜行列車１２時間「日本人はお前だけだ」 </div>
+                            <div class="desc">15k阅读 1k评论</div>
                         </div>
-                    </div>
-                    <div class="news-list-item f-cb">
-                        <div class="col-xs-5">
-                            <img src="/static/img/slider/1.jpg">
+                        <div class="item">
+                            <div class="title">Man Dies After Swimming in South Carolina Lake </div>
+                            <div class="desc">15k阅读 1k评论</div>
                         </div>
-                        <div class="col-xs-7">
-                            <div class="title">我滴个龟龟啊啊啊啊啊撒到我公司的只需发送发送服务个地方啊啊</div>
-                            <div class="info">
-                                <span>wanghuahua</span>·
-                                <span>25k</span>·
-                                <span>256°C</span>
-                            </div>
+                        <div class="item">
+                            <div class="title">Supreme Court Sides With Florida Man in Free Speech Case </div>
+                            <div class="desc">15k阅读 1k评论</div>
+                        </div>
+                        <div class="item">
+                            <div class="title">The Exact Words to Use When Negotiating Salary </div>
+                            <div class="desc">15k阅读 1k评论</div>
+                        </div>
+
                         </div>
                     </div>
-                    <div class="news-list-item f-cb">
-                        <div class="col-xs-5">
-                            <img src="/static/img/slider/1.jpg">
-                        </div>
-                        <div class="col-xs-7">
-                            <div class="title">我滴个龟龟啊啊啊啊啊撒到我公司的只需发送发送服务个地方啊啊</div>
-                            <div class="info">
-                                <span>wanghuahua</span>·
-                                <span>25k</span>·
-                                <span>256°C</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="search-bar">
-                    <input type="search" class="form-control" placeholder="搜一下">
                 </div>
             </div>
         </div>
         <div class="footer">
             © 2017 我的网站永远不可能备案
         </div>
+</div>
         <script src="/static/script/zepto.js"></script>
         <script src="/static/script/vue.js"></script>
         <script src="/static/script/js/news.js"></script>

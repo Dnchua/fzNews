@@ -1,5 +1,8 @@
 var title_href = 'header-'+location.href.split('3001/').pop();
 $('.'+title_href).addClass('active');
+$('.news-list').on('click',function () {
+    window.location.href = '/news';
+})
 new Vue({
     el:'#app',
     data:{
