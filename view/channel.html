@@ -67,6 +67,7 @@
                     <a  href='javascript:' class="list-group-item {{ motion_4_class }}" v-on:click="change(4)">游戏</a>
                 </div>
             </div>
+            <transiton name="fade">
             <div class="col-sm-7 " v-show="show_1" v-cloak>
                 <div class="news-list">
                     <div class="news-list-item f-cb">
@@ -110,6 +111,7 @@
                     </div>
                 </div>
             </div>
+            </transiton>
             <div class="col-sm-7 " v-cloak v-show="show_2">
                 <div class="news-list">
                     <div class="news-list-item f-cb">
